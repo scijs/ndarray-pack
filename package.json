@@ -1,6 +1,6 @@
 {
   "name": "ndarray-pack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Packs an array-of-arrays into a single ndarray",
   "main": "convert.js",
   "directories": {
