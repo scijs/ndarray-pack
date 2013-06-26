@@ -1,7 +1,6 @@
 "use strict"
 
 var ndarray = require("ndarray")
-var numeric = require("numeric")
 var cwise = require("cwise")
 
 var do_convert = cwise({
@@ -15,12 +14,17 @@ var do_convert = cwise({
   }
 })
 
-module.exports = function convert(arr, dtype) {
-  if(!dtype) {
-    dtype = "float64"
+module.exports = function convert(arr) {
+  var shape = [], c = arr, sz = 1
+  while(c instanceof Array) {
+    shape.push(c.length)
+    sz *= c.length
+    c = c[0]
   }
-  var shape = numeric.dim(arr)
-  var result = ndarray.zeros(shape, dtype)
+  if(shape.length === 0) {
+    return ndarray([])
+  }
+  var result = ndarray(new Float64Array(sz), shape)
   do_convert(result, arr)
   return result
 }

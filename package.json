@@ -1,15 +1,14 @@
 {
   "name": "ndarray-pack",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Packs an array-of-arrays into a single ndarray",
   "main": "convert.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "cwise": "~0.1.2",
-    "ndarray": "~0.2.1",
-    "numeric": "~1.2.6"
+    "cwise": "~0.3.2",
+    "ndarray": "~1.0.0"
   },
   "devDependencies": {
     "tap": "~0.4.2"
