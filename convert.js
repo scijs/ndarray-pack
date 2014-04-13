@@ -14,7 +14,7 @@ var do_convert = cwise({
   }
 })
 
-module.exports = function convert(arr) {
+module.exports = function convert(arr, result) {
   var shape = [], c = arr, sz = 1
   while(c instanceof Array) {
     shape.push(c.length)
@@ -22,9 +22,11 @@ module.exports = function convert(arr) {
     c = c[0]
   }
   if(shape.length === 0) {
-    return ndarray([])
+    return ndarray()
   }
-  var result = ndarray(new Float64Array(sz), shape)
+  if(!result) {
+    result = ndarray(new Float64Array(sz), shape)
+  }
   do_convert(result, arr)
   return result
 }

@@ -19,10 +19,11 @@ Install
 
     npm install pack
 
-### `require("ndarray-pack")(nested_array)`
+### `require("ndarray-pack")(nested_array[,out])`
 Converts the nested array into a packed ndarray.
 
 * `nested_array` is an array-of-arrays (ie a numeric.js array)
+* `out` is an optional ndarray that gets the result of unpacking `array`
 
 **Returns** A packed ndarray representation of the nested arrays.
 
