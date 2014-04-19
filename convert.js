@@ -1,18 +1,7 @@
 "use strict"
 
 var ndarray = require("ndarray")
-var cwise = require("cwise")
-
-var do_convert = cwise({
-  args: ["array", "scalar", "index"],
-  body: function(out, a, idx) {
-    var v = a
-    for(var i=0; i<idx.length-1; ++i) {
-      v = v[idx[i]]
-    }
-    out = v[idx[idx.length-1]]
-  }
-})
+var do_convert = require("./doConvert.js")
 
 module.exports = function convert(arr, result) {
   var shape = [], c = arr, sz = 1
