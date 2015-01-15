@@ -17,7 +17,7 @@ var y = require("ndarray-pack")(x)
 Install
 =======
 
-    npm install pack
+    npm install ndarray-pack
 
 ### `require("ndarray-pack")(nested_array[,out])`
 Converts the nested array into a packed ndarray.
