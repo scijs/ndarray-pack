@@ -23,3 +23,15 @@ require("tap").test("ndarray-pack", function(t) {
 
   t.end()
 })
+
+require("tap").test("ndarray-pack", function(t) {
+
+  var x = [[1, 0, 1],
+           [0, 1, 1],
+           [0, 0, 1],
+           [1, 0, 0]]
+
+  var y = require("../convert.js")(x, undefined, Float32Array)
+  t.type(y.data, Float32Array);
+  t.end()
+})
