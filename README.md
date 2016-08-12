@@ -19,11 +19,12 @@ Install
 
     npm install ndarray-pack
 
-### `require("ndarray-pack")(nested_array[,out])`
+### `require("ndarray-pack")(nested_array[,out, [Type]])`
 Converts the nested array into a packed ndarray.
 
 * `nested_array` is an array-of-arrays (ie a numeric.js array)
 * `out` is an optional ndarray that gets the result of unpacking `array`
+* `Type` is an optional type. This is the underlying type of the generated ndarray, default to Float64Array
 
 **Returns** A packed ndarray representation of the nested arrays.
 
